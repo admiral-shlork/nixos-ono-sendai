@@ -4,11 +4,14 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   # virtualisation.virtualbox.guest.enable = true;
 
-# Enable OpenGL
-  hardware.graphics.enable = true;
+  # AMD CPU
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
+  
+  # Enable OpenGL
+  hardware.graphics.enable = true;
 
   hardware.nvidia = {
 

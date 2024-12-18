@@ -3,7 +3,7 @@
 {
 boot = {
   # Bootloader
-  initrd.availableKernelModules = [ "ahci" "ata_piix" "ohci_pci" "ehci_pci" "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" ];
+  initrd.availableKernelModules = [ "ahci" "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   initrd.kernelModules = [ "dm-snapshot" ];
   kernelModules = [ "kvm-amd" ];
   kernelPackages = pkgs.linuxPackages_latest;
