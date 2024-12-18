@@ -11,7 +11,7 @@
   home = {
     username = "whatever";
     homeDirectory = "/home/whatever";
-    stateVersion = "24.05";
+    stateVersion = "24.11";
     packages = with pkgs; [
       audacity
       calibre
@@ -26,7 +26,7 @@
       firefox-devedition
       floorp
       gimp
-      gnome.gnome-screenshot
+      gnome-screenshot
       jetbrains.pycharm-community
       keepassxc
       libreoffice

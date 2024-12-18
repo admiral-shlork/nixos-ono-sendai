@@ -4,13 +4,6 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   # virtualisation.virtualbox.guest.enable = true;
 
-  # intel CPU
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  # wifi
-  hardware.enableAllFirmware = true;
-  hardware.firmware = [ pkgs.linux-firmware ];
-
   # bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;

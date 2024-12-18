@@ -11,7 +11,7 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  services.udev.packages = with pkgs; [ gnome-settings-daemon ];
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -35,7 +35,7 @@
     appimage-run
     brlaser
     git
-    gnome.dconf-editor
+    dconf-editor
     gnomeExtensions.appindicator
     gnomeExtensions.caffeine
     gnomeExtensions.dash-to-panel
@@ -66,32 +66,30 @@
   # Minimal gnome installation
   environment.gnome.excludePackages =
     (with pkgs; [
-      gedit
-      gnome-console
-      gnome-connections
-      gnome-photos
-      gnome-tour
-      simple-scan
-      snapshot
-      yelp
-    ])
-    ++ (with pkgs.gnome; [
       atomix
       cheese
       epiphany
       evince
       geary
+      gedit
       gnome-calendar
       gnome-characters
+      gnome-connections
+      gnome-console
       gnome-contacts
       gnome-maps
       gnome-music
+      gnome-photos
       gnome-software
       gnome-terminal
+      gnome-tour
       gnome-weather
       hitori
       iagno
+      simple-scan
+      snapshot
       tali
       totem
+      yelp
     ]);
 }

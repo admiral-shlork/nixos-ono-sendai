@@ -3,9 +3,9 @@
 {
 boot = {
   # Bootloader
-  initrd.availableKernelModules = [ "ahci" "ata_piix" "ohci_pci" "ehci_pci" "xhci_pci" "nvme" "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" ];
+  initrd.availableKernelModules = [ "ahci" "ata_piix" "ohci_pci" "ehci_pci" "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" ];
   initrd.kernelModules = [ "dm-snapshot" ];
-  kernelModules = [ "kvm-intel" "iwlwifi" ];
+  kernelModules = [ "kvm-amd" ];
   kernelPackages = pkgs.linuxPackages_latest;
   extraModulePackages = [ ];
   loader = {
@@ -14,7 +14,7 @@ boot = {
   };
 
   initrd.luks.devices = let
-    luks_root_uuid = "1b6910b0-cbce-4a7d-8231-f9579acce464";
+    luks_root_uuid = "2ba35a36-1b61-41c2-b603-dbe250f9c3fa";
   in {
     # LUKS container with root partition
     "luks-${luks_root_uuid}" = {
@@ -32,26 +32,26 @@ boot = {
     cryptbeta UUID=122683dc-1b5b-45e6-9a6f-85def4e4d3c0 /root/beta.key
   '';
 
-  # SWAP partition - f75e9a16-fe77-4f53-aedb-ba1ecfedd097
+  # SWAP partition - c30a3550-ab3b-4820-afc7-b833f4f3b36c
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/f75e9a16-fe77-4f53-aedb-ba1ecfedd097"; }
+    [ { device = "/dev/disk/by-uuid/c30a3550-ab3b-4820-afc7-b833f4f3b36c"; }
     ];
 
-  # / partition - 2a1300b3-fa2c-4aff-8657-88aab66c1477
+  # / partition - 7c1e4624-f7b5-4906-adc6-7a452e6820f7
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/2a1300b3-fa2c-4aff-8657-88aab66c1477";
+    { device = "/dev/disk/by-uuid/7c1e4624-f7b5-4906-adc6-7a452e6820f7";
       fsType = "ext4";
     };
 
-  # /boot partition - F4E7-DE8F
+  # /boot partition - 9D31-F855
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/F4E7-DE8F";
+    { device = "/dev/disk/by-uuid/9D31-F855";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
-  # /home partition - 2227f51d-958b-49a4-b048-26112e1fb51c
+  # /home partition - 390386ad-d3fc-47f4-b880-f3f62d8e69e5
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/2227f51d-958b-49a4-b048-26112e1fb51c";
+    { device = "/dev/disk/by-uuid/390386ad-d3fc-47f4-b880-f3f62d8e69e5";
       fsType = "ext4";
     };
   # ~/mnt/alpha partition - 400978a0-5204-4b72-a9a4-ee90e03749c2
