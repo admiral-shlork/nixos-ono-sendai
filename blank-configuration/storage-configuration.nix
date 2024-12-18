@@ -43,9 +43,9 @@ boot = {
       fsType = "ext4";
     };
 
-  # /boot partition - 9D31-F855
+  # /boot partition - 609B-E70D
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/9D31-F855";
+    { device = "/dev/disk/by-uuid/609B-E70D";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
