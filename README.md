@@ -21,7 +21,7 @@ nix --extra-experimental-features "nix-command flakes" shell nixpkgs#git nixpkgs
 4. Clone the repo with the configuration:
 
 ```bash
-git clone ${clone_url_here}
+git clone git@github.com:admiral-shlork/nixos-ono-sendai.git
 ```
 
 5. To install the OS run the following command from the root folder of the cloned repository:
