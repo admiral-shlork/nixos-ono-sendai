@@ -6,8 +6,7 @@
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  services.xserver.videoDrivers = ["nvidia"];
-  
+  services.xserver.videoDrivers = ["nvidia"]; 
   hardware.graphics.enable = true;
   hardware.nvidia = {
     modesetting.enable = true;

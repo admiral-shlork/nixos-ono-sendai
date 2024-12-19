@@ -1,28 +1,28 @@
 { config, pkgs, modulesPath, ... }:
 
 {
-boot = {
-  initrd.availableKernelModules = [ "ahci" "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
-  #initrd.kernelModules = [ "dm-snapshot" ];
-  initrd.kernelModules = [ ];
-  kernelModules = [ "kvm-amd" ];
-  kernelPackages = pkgs.linuxPackages_latest;
-  extraModulePackages = [ ];
-  loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-  };
+  boot = {
+    initrd.availableKernelModules = [ "ahci" "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
+    #initrd.kernelModules = [ "dm-snapshot" ];
+    initrd.kernelModules = [ ];
+    kernelModules = [ "kvm-amd" ];
+    kernelPackages = pkgs.linuxPackages_latest;
+    extraModulePackages = [ ];
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
 
-  initrd.luks.devices = let
-    luks_root_uuid = "2ba35a36-1b61-41c2-b603-dbe250f9c3fa";
-  in {
-    # LUKS container with root partition
-    "luks-${luks_root_uuid}" = {
-      device = "/dev/disk/by-uuid/${luks_root_uuid}";
-      allowDiscards = true;
+    initrd.luks.devices = let
+      luks_root_uuid = "2ba35a36-1b61-41c2-b603-dbe250f9c3fa";
+    in {
+      # LUKS container with root partition
+      "luks-${luks_root_uuid}" = {
+        device = "/dev/disk/by-uuid/${luks_root_uuid}";
+        allowDiscards = true;
+      };
     };
   };
-};
 
   # Configuration for LUKS containers and key files
   environment.etc.crypttab.text = ''
