@@ -14,7 +14,7 @@
     };
 
     initrd.luks.devices = let
-      luks_root_uuid = "2ba35a36-1b61-41c2-b603-dbe250f9c3fa";
+      luks_root_uuid = "6f35f21c-9ddf-4c25-85d6-daece14aef8b";
     in {
       # LUKS container with root partition
       "luks-${luks_root_uuid}" = {
@@ -61,23 +61,23 @@
       fsType = "ext4";
     };
 
-  fileSystems."/home/whatever/mnt/ssd_001" =
-    { device = "/dev/disk/by-label/ssd_001";
-      fsType = "ntfs";
-    };
+  # fileSystems."/home/whatever/mnt/ssd_001" =
+  #   { device = "/dev/disk/by-label/ssd_001";
+  #     fsType = "ntfs";
+  #   };
 
-  fileSystems."/home/whatever/mnt/ssd_002" =
-    { device = "/dev/disk/by-label/ssd_002";
-      fsType = "ntfs";
-    };
+  # fileSystems."/home/whatever/mnt/ssd_002" =
+  #   { device = "/dev/disk/by-label/ssd_002";
+  #     fsType = "ntfs";
+  #   };
 
-  fileSystems."/home/whatever/mnt/win10" =
-    { device = "/dev/disk/by-label/win10";
-      fsType = "ntfs";
-    };
+  # fileSystems."/home/whatever/mnt/win10" =
+  #   { device = "/dev/disk/by-label/win10";
+  #     fsType = "ntfs";
+  #   };
 
-  fileSystems."/home/whatever/mnt/win11" =
-    { device = "/dev/disk/by-label/win11";
-      fsType = "ntfs";
-    };
+  # fileSystems."/home/whatever/mnt/win11" =
+  #   { device = "/dev/disk/by-label/win11";
+  #     fsType = "ntfs";
+  #   };
 }
