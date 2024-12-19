@@ -2,7 +2,6 @@
 
 {
 boot = {
-  # Bootloader
   initrd.availableKernelModules = [ "ahci" "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   #initrd.kernelModules = [ "dm-snapshot" ];
   initrd.kernelModules = [ ];
@@ -26,8 +25,6 @@ boot = {
 };
 
   # Configuration for LUKS containers and key files
-  # LUKS container with alpha partition - 1fa0b0d6-231b-484f-975e-bb20f0b6febd
-  # LUKS container with beta partition - 122683dc-1b5b-45e6-9a6f-85def4e4d3c0  
   environment.etc.crypttab.text = ''
     cryptalpha UUID=1fa0b0d6-231b-484f-975e-bb20f0b6febd /root/alpha.key
     cryptbeta UUID=122683dc-1b5b-45e6-9a6f-85def4e4d3c0 /root/beta.key

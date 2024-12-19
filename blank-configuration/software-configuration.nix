@@ -1,36 +1,16 @@
-# Help is available in the configuration.nix(5) man page and 
-# in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
-  # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
   services.udev.packages = with pkgs; [ gnome-settings-daemon ];
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "pl";
-    variant = "";
-  };
-
   programs.firefox.enable = true;
   programs.direnv.enable = true;
 
-  # Define your user-specific home configuration
-  users.users.whatever = {
-    isNormalUser = true;
-    home = "/home/whatever";
-    # Add more configurations for your user here
-  };
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     appimage-run
     brlaser
@@ -50,20 +30,6 @@
     wget
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Minimal gnome installation
   environment.gnome.excludePackages =
     (with pkgs; [
       atomix
