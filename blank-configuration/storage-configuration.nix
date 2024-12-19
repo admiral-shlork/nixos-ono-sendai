@@ -4,7 +4,8 @@
 boot = {
   # Bootloader
   initrd.availableKernelModules = [ "ahci" "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
-  initrd.kernelModules = [ "dm-snapshot" ];
+  #initrd.kernelModules = [ "dm-snapshot" ];
+  initrd.kernelModules = [ ];
   kernelModules = [ "kvm-amd" ];
   kernelPackages = pkgs.linuxPackages_latest;
   extraModulePackages = [ ];
