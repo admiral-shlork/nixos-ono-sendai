@@ -34,55 +34,53 @@ boot = {
   '';
 
   # SWAP partition - c30a3550-ab3b-4820-afc7-b833f4f3b36c
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/c30a3550-ab3b-4820-afc7-b833f4f3b36c"; }
-    ];
+  # swapDevices =
+  #   [ { device = "/dev/disk/by-uuid/c30a3550-ab3b-4820-afc7-b833f4f3b36c"; }
+  #   ];
 
-  # / partition - 7c1e4624-f7b5-4906-adc6-7a452e6820f7
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/7c1e4624-f7b5-4906-adc6-7a452e6820f7";
+    { device = "/dev/disk/by-label/root";
       fsType = "ext4";
     };
 
-  # /boot partition - 609B-E70D
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/609B-E70D";
+    { device = "/dev/disk/by-label/BOOT";
       fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
+      options = [ "fmask=0077" "dmask=0077" ];
     };
-  # /home partition - 390386ad-d3fc-47f4-b880-f3f62d8e69e5
+
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/390386ad-d3fc-47f4-b880-f3f62d8e69e5";
+    { device = "/dev/disk/by-label/home";
       fsType = "ext4";
     };
-  # ~/mnt/alpha partition - 400978a0-5204-4b72-a9a4-ee90e03749c2
+
   fileSystems."/home/whatever/mnt/alpha" =
     { device = "/dev/disk/by-uuid/400978a0-5204-4b72-a9a4-ee90e03749c2";
       fsType = "ext4";
     };
-  # ~/mnt/beta partition - dc243f80-316b-496b-b8c6-62881134059d
+
   fileSystems."/home/whatever/mnt/beta" =
     { device = "/dev/disk/by-uuid/dc243f80-316b-496b-b8c6-62881134059d";
       fsType = "ext4";
     };
-  # ~/mnt/ssd_001 partition - BE4EEA784EEA28BB
+
   fileSystems."/home/whatever/mnt/ssd_001" =
-    { device = "/dev/disk/by-uuid/BE4EEA784EEA28BB";
+    { device = "/dev/disk/by-label/ssd_001";
       fsType = "ntfs";
     };
-  # ~/mnt/ssd_002 partition - BAA04AB0A04A7345
+
   fileSystems."/home/whatever/mnt/ssd_002" =
-    { device = "/dev/disk/by-uuid/BAA04AB0A04A7345";
+    { device = "/dev/disk/by-label/ssd_002";
       fsType = "ntfs";
     };
-  # ~/mnt/win10 partition - 32DC7B8FDC7B4C5B
+
   fileSystems."/home/whatever/mnt/win10" =
-    { device = "/dev/disk/by-uuid/32DC7B8FDC7B4C5B";
+    { device = "/dev/disk/by-label/win10";
       fsType = "ntfs";
     };
-  # ~/mnt/win11 partition - BA7A5EC27A5E7AD9
+
   fileSystems."/home/whatever/mnt/win11" =
-    { device = "/dev/disk/by-uuid/BA7A5EC27A5E7AD9";
+    { device = "/dev/disk/by-label/win11";
       fsType = "ntfs";
     };
 }
