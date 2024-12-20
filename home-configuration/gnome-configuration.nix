@@ -121,7 +121,7 @@
     };
     # Dash-to-panel extension preferences
     "org/gnome/shell/extensions/dash-to-panel" = {
-      panel-sizes = "{\"0\":34}";
+      panel-sizes = "{\"0\":34,\"1\":34,\"2\":34,\"3\":34}";
       appicon-margin = 3;
       appicon-padding = 1;
       panel-positions = "{\"0\":\"RIGHT\"}";
@@ -133,6 +133,8 @@
       dot-style-unfocused = "SQUARES";
       scroll-icon-action = "PASS_THROUGH";
       scroll-panel-action = "CHANGE_VOLUME";
+      primary-monitor = 0;
+      multi-monitors = false;
       trans-panel-opacity = 0.00;
       trans-use-custom-opacity = true;
     };
