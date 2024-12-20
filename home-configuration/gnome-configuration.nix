@@ -120,24 +120,21 @@
       ];
     };
     # Dash-to-panel extension preferences
-    "org/gnome/shell/extensions/dash-to-panel" = {
-      panel-sizes = "{\"0\":34,\"1\":34,\"2\":34,\"3\":34}";
-      appicon-margin = 3;
-      appicon-padding = 1;
-      panel-positions = "{\"0\":\"RIGHT\"}";
-      panel-element-positions = ''
-      {"0":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"}]}
-      '';
-      dot-position = "BOTTOM";
-      dot-style-focused = "SQUARES";
-      dot-style-unfocused = "SQUARES";
-      scroll-icon-action = "PASS_THROUGH";
-      scroll-panel-action = "CHANGE_VOLUME";
-      primary-monitor = 0;
-      multi-monitors = false;
-      trans-panel-opacity = 0.00;
-      trans-use-custom-opacity = true;
-    };
+    # "org/gnome/shell/extensions/dash-to-panel" = {
+    #   appicon-margin = 3;
+    #   appicon-padding = 1;
+    #   panel-positions = "{\"0\":\"RIGHT\"}";
+    #   panel-element-positions = ''
+    #   {"0":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"}]}
+    #   '';
+    #   dot-position = "BOTTOM";
+    #   dot-style-focused = "SQUARES";
+    #   dot-style-unfocused = "SQUARES";
+    #   scroll-icon-action = "PASS_THROUGH";
+    #   scroll-panel-action = "CHANGE_VOLUME";
+    #   trans-panel-opacity = 0.00;
+    #   trans-use-custom-opacity = true;
+    # };
     # Date-menu-formatter preferences
     "org/gnome/shell/extensions/date-menu-formatter" = {
       pattern = "dd\nMM\nyy\nE\nHH\nmm\nss";
