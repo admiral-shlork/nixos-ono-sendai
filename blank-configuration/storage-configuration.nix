@@ -14,7 +14,7 @@
     };
 
     initrd.luks.devices = let
-      luks_root_uuid = "6f35f21c-9ddf-4c25-85d6-daece14aef8b";
+      luks_root_uuid = "a6f03b03-af9e-479f-b7b5-fa4b37b4ce4b";
     in {
       # LUKS container with root partition
       "luks-${luks_root_uuid}" = {
