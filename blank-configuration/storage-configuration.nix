@@ -5,8 +5,9 @@
     initrd.availableKernelModules = [ "ahci" "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
     #initrd.kernelModules = [ "dm-snapshot" ];
     initrd.kernelModules = [ ];
-    kernelModules = [ "kvm-amd" ];
+    # kernelModules = [ "kvm-amd" ];
     kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = [ "kvm.enable_virt_at_load=0" ];
     extraModulePackages = [ ];
     loader = {
       systemd-boot.enable = true;
