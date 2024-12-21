@@ -29,6 +29,7 @@
   environment.etc.crypttab.text = ''
     cryptalpha UUID=1fa0b0d6-231b-484f-975e-bb20f0b6febd /root/alpha.key
     cryptbeta UUID=122683dc-1b5b-45e6-9a6f-85def4e4d3c0 /root/beta.key
+    cryptgamma UUID=b808597c-7261-4784-9d0c-89c213ca317f /root/gamma.key
   '';
 
   # SWAP partition - c30a3550-ab3b-4820-afc7-b833f4f3b36c
@@ -53,12 +54,17 @@
     };
 
   fileSystems."/home/whatever/mnt/alpha" =
-    { device = "/dev/disk/by-uuid/400978a0-5204-4b72-a9a4-ee90e03749c2";
+    { device = "/dev/disk/by-label/alpha";
       fsType = "ext4";
     };
 
   fileSystems."/home/whatever/mnt/beta" =
-    { device = "/dev/disk/by-uuid/dc243f80-316b-496b-b8c6-62881134059d";
+    { device = "/dev/disk/by-label/beta";
+      fsType = "ext4";
+    };
+
+  fileSystems."/home/whatever/mnt/gamma" =
+    { device = "/dev/disk/by-label/gamma";
       fsType = "ext4";
     };
 
