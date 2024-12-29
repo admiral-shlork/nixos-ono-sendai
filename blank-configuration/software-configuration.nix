@@ -16,6 +16,7 @@
     brlaser
     git
     dconf-editor
+    gnome-extension-manager
     gnomeExtensions.appindicator
     gnomeExtensions.caffeine
     gnomeExtensions.dash-to-panel
