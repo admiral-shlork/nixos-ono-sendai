@@ -32,10 +32,11 @@
     cryptgamma UUID=b808597c-7261-4784-9d0c-89c213ca317f /root/gamma.key
   '';
 
-  # SWAP partition - c30a3550-ab3b-4820-afc7-b833f4f3b36c
-  # swapDevices =
-  #   [ { device = "/dev/disk/by-uuid/c30a3550-ab3b-4820-afc7-b833f4f3b36c"; }
-  #   ];
+  # swapDevices = [{ 
+  #     device = "/dev/disk/by-uuid/c30a3550-ab3b-4820-afc7-b833f4f3b36c";
+      # device = "/swapfile";
+      # size = 64 * 1024;
+  #   }];
 
   fileSystems."/" =
     { device = "/dev/disk/by-label/root";

@@ -56,6 +56,7 @@
       yacreader
     ];
   };
+
   programs.bash = {
     enable = true;
     initExtra = ''
