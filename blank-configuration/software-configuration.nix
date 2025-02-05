@@ -1,5 +1,11 @@
-{ config, pkgs, ... }:
-
+{ veracrypt_nixpkgs, config, pkgs, ... }:
+let
+  veracrypt_pkgs = import veracrypt_nixpkgs {
+    system = config.nixpkgs.system;
+    config.allowUnfree = true;
+  };
+  veracrypt = veracrypt_pkgs.veracrypt;
+in
 {
   services.xserver.enable = true;
 
@@ -26,6 +32,7 @@
     home-manager
     nh
     terminator
+    veracrypt
     vim
     vscodium
     wget
@@ -67,8 +74,8 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "whatever" ];
-  virtualisation.virtualbox.guest.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
+  # users.extraGroups.vboxusers.members = [ "whatever" ];
+  # virtualisation.virtualbox.guest.enable = true;
   
 }
