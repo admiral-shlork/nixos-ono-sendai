@@ -34,6 +34,7 @@ in
     terminator
     veracrypt
     vim
+    virt-manager
     vscodium
     wget
   ];
@@ -74,6 +75,11 @@ in
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
+  # Set up libvirtd
+  virtualisation.libvirtd = {
+    enable = true;
+  };
+  users.groups.libvirtd.members = ["root" "whatever" ];
   # virtualisation.virtualbox.host.enable = true;
   # users.extraGroups.vboxusers.members = [ "whatever" ];
   # virtualisation.virtualbox.guest.enable = true;
