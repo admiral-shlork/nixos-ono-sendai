@@ -1,11 +1,4 @@
-{ veracrypt_nixpkgs, config, pkgs, ... }:
-let
-  veracrypt_pkgs = import veracrypt_nixpkgs {
-    system = config.nixpkgs.system;
-    config.allowUnfree = true;
-  };
-  veracrypt = veracrypt_pkgs.veracrypt;
-in
+{ config, pkgs, ... }:
 {
   services.xserver.enable = true;
 
