@@ -88,8 +88,8 @@
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
       binding = "<Super>w";
-      command = "/run/current-system/sw/bin/terminator";
-      name = "Terminator";
+      command = "ghostty";
+      name = "Ghostty";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
       binding = "Print";
