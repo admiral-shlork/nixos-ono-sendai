@@ -4,7 +4,7 @@
     enable = true;
     drivers = [pkgs.brlaser];
   };
-z
+
   hardware.printers = let
     brl2370d = "Brother_HL-L2370DN";
   in {
