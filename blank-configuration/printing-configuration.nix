@@ -1,10 +1,10 @@
-{pkgs, brlaser_nixpkgs, ...}: {
+{pkgs, ...}: {
 
   services.printing = {
     enable = true;
-    drivers = [brlaser_nixpkgs.legacyPackages.x86_64-linux.brlaser];
+    drivers = [pkgs.brlaser];
   };
-
+z
   hardware.printers = let
     brl2370d = "Brother_HL-L2370DN";
   in {
