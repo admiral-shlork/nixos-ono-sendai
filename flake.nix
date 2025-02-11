@@ -31,6 +31,9 @@
                 useUserPackages = true;
               };
             }
+            {
+              _module.args.inputs = self.inputs;
+            }
           ];
         };
       };
