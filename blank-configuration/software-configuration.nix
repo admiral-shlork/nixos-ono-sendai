@@ -15,6 +15,7 @@
     brlaser
     git
     dconf-editor
+    jellyfin-media-player
     ghostty
     gnome-extension-manager
     gnomeExtensions.appindicator
