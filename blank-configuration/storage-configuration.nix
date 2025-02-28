@@ -6,7 +6,7 @@
     #initrd.kernelModules = [ "dm-snapshot" ];
     initrd.kernelModules = [ ];
     # kernelModules = [ "kvm-amd" ];
-    kernelPackages = pkgs.linuxPackages_6_12; #kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxPackages_6_12; #kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [ "kvm.enable_virt_at_load=0" ];
     extraModulePackages = [ ];
     loader = {
