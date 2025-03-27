@@ -32,14 +32,10 @@
     "org/gnome/nautilus/icon-view" = {
       captions = [ "size" "type" "none" ];
     };
-    "org/gnome/nautilus/list-view" = {
-      default-visible-columns = [ "name" "size" "type" "owner" "group" "permissions" "date_modified"] ;
-      use-tree-view = true;
-    };
     # Desktop background
     "org/gnome/desktop/background" = {
       picture-options = "none";
-      primary-color = "#000000";
+      primary-color = "#282828";
     };
     # Disable lock screen notifications
     "org/gnome/desktop/notifications" = {
@@ -59,21 +55,6 @@
     # Enable active edges for window tiling
     "org/gnome/mutter" = {
       edge-tiling = true;
-    };
-    # Enable nightlight
-    "org/gnome/settings-daemon/plugins/color" = {
-      night-light-enabled = true;
-      night-light-schedule-automatic = true;
-    };
-    # Power settings
-    "org/gnome/settings-daemon/plugins/power" = {
-      idle-dim = false;
-      power-button-action = "interactive";
-      power-saver-profile-on-low-battery = false;
-      sleep-inactive-ac-timeout = 900;
-      sleep-inactive-ac-type = "nothing";
-      sleep-inactive-battery-timeout = 1800;
-      sleep-inactive-battery-type = "suspend";
     };
     # Keyboard bindings
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -118,22 +99,6 @@
         no-overview.extensionUuid
       ];
     };
-    # Dash-to-panel extension preferences
-    # "org/gnome/shell/extensions/dash-to-panel" = {
-    #   appicon-margin = 3;
-    #   appicon-padding = 1;
-    #   panel-positions = "{\"0\":\"RIGHT\"}";
-    #   panel-element-positions = ''
-    #   {"0":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"}]}
-    #   '';
-    #   dot-position = "BOTTOM";
-    #   dot-style-focused = "SQUARES";
-    #   dot-style-unfocused = "SQUARES";
-    #   scroll-icon-action = "PASS_THROUGH";
-    #   scroll-panel-action = "CHANGE_VOLUME";
-    #   trans-panel-opacity = 0.00;
-    #   trans-use-custom-opacity = true;
-    # };
     # Date-menu-formatter preferences
     "org/gnome/shell/extensions/date-menu-formatter" = {
       pattern = "dd\nMM\nyy\nE\nHH\nmm\nss";
