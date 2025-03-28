@@ -15,12 +15,21 @@
       });
     })
   ];
-
   dconf.settings = {
     # Enable location
     "org/gnome/system/location" = {
       enabled = true;
       max-accuracy-level = "exact";
+    };
+    # Power settings
+    "org/gnome/settings-daemon/plugins/power" = {
+      idle-dim = false;
+      power-button-action = "interactive";
+      power-saver-profile-on-low-battery = false;
+      sleep-inactive-ac-timeout = 900;
+      sleep-inactive-ac-type = "nothing";
+      sleep-inactive-battery-timeout = 1800;
+      sleep-inactive-battery-type = "suspend";
     };
     # Nautilus preferences
     "org/gnome/nautilus/preferences" = {
@@ -35,7 +44,7 @@
     # Desktop background
     "org/gnome/desktop/background" = {
       picture-options = "none";
-      primary-color = "#282828";
+      primary-color = "#000000";
     };
     # Disable lock screen notifications
     "org/gnome/desktop/notifications" = {
