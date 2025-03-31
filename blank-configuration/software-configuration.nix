@@ -79,4 +79,10 @@
   # users.extraGroups.vboxusers.members = [ "whatever" ];
   # virtualisation.virtualbox.guest.enable = true;
   
+  services.sunshine = {
+    enable = true;
+    autoStart = true;
+    capSysAdmin = true;
+    openFirewall = true;
+  };
 }

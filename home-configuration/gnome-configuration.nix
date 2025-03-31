@@ -130,5 +130,7 @@
     "org/gnome/mutter" = {
       experimental-features = [ "scale-monitor-framebuffer" ];
     };
+    # Sound
+    "org/gnome/desktop/sound".allow-volume-above-100-percent = true;
   };  
 }
