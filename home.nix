@@ -35,6 +35,7 @@
       nerdfonts
       obsidian
       parsec-bin
+      protontricks
       protonvpn-gui
       python3
       python311Packages.pip
