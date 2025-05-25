@@ -34,6 +34,11 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
+  fonts.packages = [
+    pkgs.nerd-fonts.fira-code
+    pkgs.nerd-fonts.droid-sans-mono
+  ];
+
   # Set up libvirtd
   virtualisation.libvirtd = {
     enable = true;
