@@ -22,7 +22,7 @@
       easytag
       element-desktop
       evince
-      firefox-devedition-bin
+      firefox-devedition
       floorp
       gimp
       jetbrains.pycharm-community
