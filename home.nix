@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./home-configuration/gnome-configuration.nix
       ./home-configuration/starship-configuration.nix
     ];
 
@@ -25,6 +26,7 @@
       firefox-devedition
       floorp
       gimp
+      gnome-screenshot
       jetbrains.pycharm-community
       keepassxc
       libreoffice
