@@ -13,6 +13,7 @@
     homeDirectory = "/home/whatever";
     stateVersion = "25.05";
     packages = with pkgs; [
+      alpaca
       audacity
       calibre
       deadbeef
