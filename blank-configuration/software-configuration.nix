@@ -5,6 +5,9 @@
   # Enable the Gnome Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+
+  services.openssh.enable = true;
+
   services.udev.packages = with pkgs; [ gnome-settings-daemon ];
 
   programs.firefox.enable = true;
