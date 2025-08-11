@@ -16,6 +16,7 @@
       alpaca
       audacity
       calibre
+      code-cursor
       deadbeef
       deluge-gtk
       discord
