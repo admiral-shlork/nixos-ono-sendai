@@ -29,7 +29,7 @@
       floorp
       gimp
       gnome-screenshot
-      jetbrains.pycharm-community
+      #jetbrains.pycharm-community
       keepassxc
       libreoffice
       librewolf
