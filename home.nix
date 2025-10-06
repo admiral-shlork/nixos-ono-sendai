@@ -35,7 +35,7 @@
       librewolf
       lutris
       mangohud
-      megasync
+      #megasync
       obsidian
       parsec-bin
       protontricks
