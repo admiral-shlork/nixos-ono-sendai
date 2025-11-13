@@ -65,11 +65,6 @@
       fsType = "ext4";
     };
 
-  fileSystems."/home/whatever/mnt/gamma" =
-    { device = "/dev/disk/by-label/gamma";
-      fsType = "ext4";
-    };
-
   fileSystems."/home/whatever/mnt/delta" =
     { device = "/dev/disk/by-label/delta";
       fsType = "ext4";
