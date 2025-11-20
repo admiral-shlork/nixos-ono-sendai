@@ -25,7 +25,7 @@
       easytag
       element-desktop
       evince
-      firefox-devedition
+      #firefox-devedition
       floorp
       gimp
       gnome-screenshot

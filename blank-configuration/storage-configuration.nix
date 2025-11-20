@@ -80,10 +80,10 @@
       fsType = "ntfs";
     };
 
-  # fileSystems."/home/whatever/mnt/ssd_003" =
-  #   { device = "/dev/disk/by-label/ssd_003";
-  #     fsType = "ntfs";
-  #   };
+  fileSystems."/home/whatever/mnt/ssd_003" =
+    { device = "/dev/disk/by-label/ssd_003";
+      fsType = "ntfs";
+    };
 
   fileSystems."/home/whatever/mnt/win11" =
     { device = "/dev/disk/by-label/win11";
