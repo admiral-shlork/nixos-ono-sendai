@@ -70,23 +70,23 @@
       fsType = "ext4";
     };
 
-  fileSystems."/home/whatever/mnt/ssd_001" =
-    { device = "/dev/disk/by-label/ssd_001";
-      fsType = "ntfs";
-    };
+  # fileSystems."/home/whatever/mnt/ssd_001" =
+  #   { device = "/dev/disk/by-label/ssd_001";
+  #     fsType = "ntfs";
+  #   };
 
-  fileSystems."/home/whatever/mnt/ssd_002" =
-    { device = "/dev/disk/by-label/ssd_002";
-      fsType = "ntfs";
-    };
+  # fileSystems."/home/whatever/mnt/ssd_002" =
+  #   { device = "/dev/disk/by-label/ssd_002";
+  #     fsType = "ntfs";
+  #   };
 
-  fileSystems."/home/whatever/mnt/ssd_003" =
-    { device = "/dev/disk/by-label/ssd_003";
-      fsType = "ntfs";
-    };
+  # fileSystems."/home/whatever/mnt/ssd_003" =
+  #   { device = "/dev/disk/by-label/ssd_003";
+  #     fsType = "ntfs";
+  #   };
 
-  fileSystems."/home/whatever/mnt/win11" =
-    { device = "/dev/disk/by-label/win11";
-      fsType = "ntfs";
-    };
+  # fileSystems."/home/whatever/mnt/win11" =
+  #   { device = "/dev/disk/by-label/win11";
+  #     fsType = "ntfs";
+  #   };
 }

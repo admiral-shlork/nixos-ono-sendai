@@ -17,8 +17,6 @@
       audacity
       calibre
       code-cursor
-      deadbeef
-      deluge-gtk
       discord
       docker
       dropbox
@@ -26,7 +24,7 @@
       element-desktop
       evince
       #firefox-devedition
-      floorp
+      floorp-bin
       gimp
       gnome-screenshot
       #jetbrains.pycharm-community
@@ -43,7 +41,6 @@
       python3
       python311Packages.pip
       signal-desktop
-      soulseekqt
       soundconverter
       # steam
       telegram-desktop
